@@ -1,13 +1,22 @@
 type AccardionPropsType = {
-    titleValue: string;
+    titleValue: string,
+    collapsed: boolean,
 }
 function Accardion(props: AccardionPropsType) {
-    return (
-        <div>
-            <AccardionTitle title={props.titleValue} />
-            <AccardionBody />
-        </div>
-    );
+    if (props.collapsed === false) {
+        return (
+            <div>
+                <AccardionTitle title={props.titleValue} />
+                <AccardionBody />
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <AccardionTitle title={props.titleValue} />
+            </div>
+        )
+    }
 }
 
 type AccardionTitlePropsType = {
@@ -29,3 +38,8 @@ function AccardionBody() {
     )
 }
 export default Accardion;
+
+
+{/* <div>
+
+</div> */}

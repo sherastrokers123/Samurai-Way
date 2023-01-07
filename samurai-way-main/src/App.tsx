@@ -14,9 +14,8 @@ function App() {
       <Rating value={3} />
       <Rating value={4} />
       <Rating value={5} />
-      <Accardion titleValue={"Menu"} />
-      <Rating value={3} />
-      <Accardion titleValue={"User"} />
+      <Accardion titleValue={"Menu"} collapsed={true} />
+      <Accardion titleValue={"User"} collapsed={true} />
     </div>
   );
 }
